@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title of Page with all people</title>
+</head>
+
+
+<body>
+<p align="center"> Welcome to the library</p>
+<br/>
+<div th:each="eachPerson : ${allPeople}">
+    <a th:href="@{/people/{id} (id=${eachPerson.getId()})}" th:text="${eachPerson.getName()}">
+
+
+    </a>
+</div>
+
+<br/>
+<br/>
+<br/>
+
+<a th:href="@{/people/new}">Create new person</a>
+<br/>
+<form th:action="@{/book}">
+    <br/>
+    <p>The button to go to the library 🠗 </p>
+    <input type="submit" value="Click go to book ">
+</form>
+
+
+</body>
+
+</html>
