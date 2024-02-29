@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Admin page</title>
 </head>
 <body>
-
-
+<p align="center">This is the admin page</p>
+<br/>
+<br/>
+<p>These buttons will take you to the desired sections</p>
+<br/>
+<form th:action="@{/people}">
+    <p>This button will enter the People</p>
+    <input type="submit" value="People">
+</form>
+    <br/>
+    <form th:action="@{/book}">
+        <p>This button will enter the books</p>
+        <input type="submit" value="Book">
+    </form>
 </body>
 </html>
